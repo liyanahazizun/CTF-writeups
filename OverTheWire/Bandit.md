@@ -22,18 +22,27 @@ ls, cd, cat, file, du, find
 
 ### Solution
 **1. List files.**
+
 `ls`
+
 ![alt text](images/image.png)
+
 This lists the files and directories in the current directory. I used it to confirm if the `readme` file is present or to determine if I need to navigate to another directory.
 
 **2. Check file type**
+
 `file readme`
+
 ![alt text](images/image-1.png)
+
 This checks the file type of `readme`. Different file types require different methods to access their content, so this step ensures we know how to proceed.
 
 **3. Display content**
+
 `cat readme`
+
 ![alt text](images/image-2.png)
+
 Since the `readme` file was identified as an ASCII text file, I used `cat` to display its content and retrieve the password for the next level.
 
 >[!NOTE]
