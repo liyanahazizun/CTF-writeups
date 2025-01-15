@@ -51,7 +51,7 @@ Check the file's contents:
 ```
 cat files/2cdcb2de
 ```
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 Output indicates the file is encrypted.
 ### 6.  Decrypt the File
 Run the decryption script on the identified file:
