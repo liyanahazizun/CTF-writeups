@@ -1,8 +1,8 @@
 # Verify
 
-- [Challange Information](##challenge-information)
-- [Solution](##solution)
-- [Solution Breakdown](##breakdown)
+- [Challange Information](#challenge-information)
+- [Solution](#solution)
+- [Solution Breakdown](#breakdown)
 
 ## Challenge Information
 ```
@@ -33,25 +33,25 @@ Check the files in the directory:
 ```
 ls -l
 ```
-![alt text](picoCTF/picoCTF_2024/Forensics/images/image.png)
+![alt text](images/image.png)
 View contents of the files subdirectory:
 ```
 ls -l files/*
 ```
-![alt text](picoCTF/picoCTF_2024/Forensics/images/image-1.png)
+![alt text](images/image-1.png)
 ### 4. Verify SHA-256 Checksum
 Match the file's SHA-256 checksum with the one in `checksum.txt`:
 ```
 sha256sum files/* | grep -f checksum.txt
 ```
-![alt text](picoCTF/picoCTF_2024/Forensics/images/image-2.png)
+![alt text](images/image-2.png)
 This identifies the file `files/2cdcb2de`
 ### 5. Read the File
 Check the file's contents:
 ```
 cat files/2cdcb2de
 ```
-![alt text](picoCTF/picoCTF_2024/Forensics/images/image-3.png)
+![alt text](image-3.png)
 Output indicates the file is encrypted.
 ### 6.  Decrypt the File
 Run the decryption script on the identified file:
@@ -59,7 +59,7 @@ Run the decryption script on the identified file:
 ./decrypt.sh files/2cdcb2de
 ```
 Decrypt output:
-![alt text](picoCTF/picoCTF_2024/Forensics/images/image-4.png)
+![alt text](images/image-4.png)
 ## Breakdown
 ### 1. `ls -l`
 This command is used to confirm that the key files (`checksum.txt` and `decrypt.sh`) are present in the current directory. These files are essential to solve the challenge, so this step ensures they exist and verifies their properties (whether they are executable).
