@@ -47,3 +47,28 @@ Since the `readme` file was identified as an ASCII text file, I used `cat` to di
 
 >[!NOTE]
 >This is **NOT** the most efficient way to go about this problem. Though it is reasonable to determine the file type, in most cases, you can directly attept to read the file with `cat`. The `file` command is only necessary if `cat` or another reading method fails.
+
+## Level 1
+### Level Goal
+The password for the next level is stored in a file called **-** located in the home directory.
+
+### Commands you may need to solve this level
+```
+ls, cd, cat, file, du, find
+```
+
+### Solution
+**1. List files.**
+
+`ls`
+Verifies the presence of the file named `-` in the current directory.
+
+![alt text](images/image-3.png)
+
+**2. Display Contents.**
+
+`cat ./-`
+
+Using `cat` directly with `-` would cause issues since `-` is interpreted as standard input. Preceding the filename with `./` explicitly references the file and avoids this issue. Additionally, using `./` is a good practice for handling file names with special characters.
+
+
