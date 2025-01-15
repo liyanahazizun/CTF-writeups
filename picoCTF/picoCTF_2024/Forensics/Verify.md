@@ -5,7 +5,6 @@
 - [Solution Breakdown](#breakdown)
 
 ## Challenge Information
-```
 Author: Jeffery John
 
 Description:
@@ -21,8 +20,9 @@ Hints:
 1. Checksums let you tell if a file is complete and from the original distributor. If the hash doesn't match, it's a different file/
 2. You can create a SHA checksum of a file with `sha256sum <file>` or all files in a directory with `sha256sum <directory>/*`.
 3. Remember you can pipe the output of one command to another with `|`.
-```
+
 [Challenge link](https://play.picoctf.org/practice/challenge/450)
+
 ## Solution
 ### 1. Open Terminal
 Launch any terminal. For this solution, I used Ubuntu.
