@@ -71,7 +71,7 @@ Verifies the presence of the file named `-` in the current directory.
 
 `cat ./-`
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Using `cat` directly with `-` would cause issues since `-` is interpreted as standard input. Preceding the filename with `./` explicitly references the file and avoids this issue. Additionally, using `./` is a good practice for handling file names with special characters.
 
