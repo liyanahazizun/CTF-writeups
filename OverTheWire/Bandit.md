@@ -1,6 +1,8 @@
 # Bandit
 - [Challange Information](#challenge-information)
 - [Level 0](#level-0)
+- [Level 1](#level-1)
+- [Level 2](#level-2)
 - [Solution Breakdown](#breakdown)
 
 ## Challenge Information
@@ -69,6 +71,11 @@ Verifies the presence of the file named `-` in the current directory.
 
 `cat ./-`
 
+![alt text](image-4.png)
+
 Using `cat` directly with `-` would cause issues since `-` is interpreted as standard input. Preceding the filename with `./` explicitly references the file and avoids this issue. Additionally, using `./` is a good practice for handling file names with special characters.
+
+## Level 2
+### Level Goal
 
 
