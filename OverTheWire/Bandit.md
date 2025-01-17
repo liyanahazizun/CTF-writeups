@@ -77,5 +77,27 @@ Using `cat` directly with `-` would cause issues since `-` is interpreted as sta
 
 ## Level 2
 ### Level Goal
+The password for the next level is stored in a file called **spaces in this filename** located in the home directory.
 
+### Commands you may need to solve this level
+```
+ls, cd, cat, file, du, find
+```
+
+### Solution
+**1. List files.**
+
+`ls`
+
+Verifies the presence of the file named `spaces in this filename` in the current directory.
+
+![alt text](images/image-5.png)
+
+**2. Display contents.**
+
+`cat "spaces in this filename"`
+
+Since the file name contains spaces, wrapping it in quotes tells the command to treat the entire name as one file instead of breaking it up.
+
+![alt text](images/image-6.png)
 
