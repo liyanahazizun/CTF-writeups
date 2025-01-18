@@ -4,6 +4,7 @@
 - [Level 1](#level-1)
 - [Level 2](#level-2)
 - [Level 3](#level-3)
+- [Level 4](#level-4)
 
 ## Challenge Information
 
@@ -88,7 +89,7 @@ Since the file name contains spaces, wrapping it in quotes tells the command to 
 
 ## Level 3
 ### Level Goal
-The password for the next level is stored in a hidden file in the **inhere** directory.
+The password for the next level is stored in a hidden file in the `inhere` directory.
 
 ### Solution
 **1. List directory**
@@ -127,3 +128,34 @@ Lists all files, including hidden ones (files beginning with a `.`), in the `inh
 ![alt text](images/image-11.png)
 
 Reads the content of the hidden file to retrieve the password.
+
+## Level 4
+### Level Goal
+The password for the next level is stored in the only human-readable file in the `inhere` directory.
+
+### Solution
+**1. List Directory**
+`ls`
+
+![alt text](images/image-12.png)
+
+Verifies that the `inhere` directory exists in the current working directory.
+
+**2. Check Filetypes of the Files in the `inhere` Directory**
+`file inhere/*`
+
+![alt text](images/image-13.png)
+
+Lists all files in the `inhere` directory along with their file types. This helps identify the human-readable file, which will be labeled as **ASCII text**.
+
+**Alternative:**
+`file inhere/* | grep ASCII text` 
+
+![alt text](images/image-14.png)
+
+Filters the output to display only files classified as ASCII text, making it easier to locate the target file.
+
+**3. Display Contents**
+`cat inhere/-file07`
+
+Reads the content of the file to retrieve the password.
