@@ -54,6 +54,7 @@ The password for the next level is stored in a file called **-** located in the 
 **1. List files.**
 
 `ls`
+
 Verifies the presence of the file named `-` in the current directory.
 
 ![alt text](images/image-3.png)
@@ -102,6 +103,7 @@ Verifies that the inhere directory exists in the current working directory.
 
 
 **2. Verify `inhere` is a Directory *Optional***
+
 `file inhere`
 
 ![alt text](images/image-8.png)
@@ -109,6 +111,7 @@ Verifies that the inhere directory exists in the current working directory.
 Confirms that `inhere` is a directory. This step is optional if you already know the target is a directory.
 
 **3. List files in `inhere` directory**
+
 `ls`
 
 ![alt text](images/image-9.png)
@@ -116,6 +119,7 @@ Confirms that `inhere` is a directory. This step is optional if you already know
 Lists visible files in the `inhere` directory. Since the target is a hidden file, this step likely won't reveal it but provides an initial overview.
 
 **4. List hidden files in inhere directory**
+
 `ls -al`
 
 ![alt text](images/image-10.png)
@@ -123,6 +127,7 @@ Lists visible files in the `inhere` directory. Since the target is a hidden file
 Lists all files, including hidden ones (files beginning with a `.`), in the `inhere` directory. This reveals the target file.
 
 **5. Display contents**
+
 `cat ...Hiding-From-You`
 
 ![alt text](images/image-11.png)
@@ -135,6 +140,7 @@ The password for the next level is stored in the only human-readable file in the
 
 ### Solution
 **1. List Directory**
+
 `ls`
 
 ![alt text](images/image-12.png)
@@ -142,6 +148,7 @@ The password for the next level is stored in the only human-readable file in the
 Verifies that the `inhere` directory exists in the current working directory.
 
 **2. Check Filetypes of the Files in the `inhere` Directory**
+
 `file inhere/*`
 
 ![alt text](images/image-13.png)
@@ -149,6 +156,7 @@ Verifies that the `inhere` directory exists in the current working directory.
 Lists all files in the `inhere` directory along with their file types. This helps identify the human-readable file, which will be labeled as **ASCII text**.
 
 **Alternative:**
+
 `file inhere/* | grep ASCII text` 
 
 ![alt text](images/image-14.png)
@@ -156,6 +164,7 @@ Lists all files in the `inhere` directory along with their file types. This help
 Filters the output to display only files classified as ASCII text, making it easier to locate the target file.
 
 **3. Display Contents**
+
 `cat inhere/-file07`
 
 Reads the content of the file to retrieve the password.
