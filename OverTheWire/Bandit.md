@@ -3,7 +3,7 @@
 - [Level 0](#level-0)
 - [Level 1](#level-1)
 - [Level 2](#level-2)
-- [Solution Breakdown](#breakdown)
+- [Level 3](#level-3)
 
 ## Challenge Information
 
@@ -16,11 +16,6 @@ The game is accessed using SSH. The host to connect to is bandit.labs.overthewir
 ## Level 0
 ### Level Goal
 The password for the next level is stored in a file called **readme** located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
-
-### Commands you may need to solve this level
-```
-ls, cd, cat, file, du, find
-```
 
 ### Solution
 **1. List files.**
@@ -54,11 +49,6 @@ Since the `readme` file was identified as an ASCII text file, I used `cat` to di
 ### Level Goal
 The password for the next level is stored in a file called **-** located in the home directory.
 
-### Commands you may need to solve this level
-```
-ls, cd, cat, file, du, find
-```
-
 ### Solution
 **1. List files.**
 
@@ -79,11 +69,6 @@ Using `cat` directly with `-` would cause issues since `-` is interpreted as sta
 ### Level Goal
 The password for the next level is stored in a file called **spaces in this filename** located in the home directory.
 
-### Commands you may need to solve this level
-```
-ls, cd, cat, file, du, find
-```
-
 ### Solution
 **1. List files.**
 
@@ -101,3 +86,44 @@ Since the file name contains spaces, wrapping it in quotes tells the command to 
 
 ![alt text](images/image-6.png)
 
+## Level 3
+### Level Goal
+The password for the next level is stored in a hidden file in the **inhere** directory.
+
+### Solution
+**1. List directory**
+
+`ls`
+
+![alt text](images/image-7.png)
+
+Verifies that the inhere directory exists in the current working directory.
+
+
+**2. Verify `inhere` is a Directory *Optional***
+`file inhere`
+
+![alt text](images/image-8.png)
+
+Confirms that `inhere` is a directory. This step is optional if you already know the target is a directory.
+
+**3. List files in `inhere` directory**
+`ls`
+
+![alt text](images/image-9.png)
+
+Lists visible files in the `inhere` directory. Since the target is a hidden file, this step likely won't reveal it but provides an initial overview.
+
+**4. List hidden files in inhere directory**
+`ls -al`
+
+![alt text](images/image-10.png)
+
+Lists all files, including hidden ones (files beginning with a `.`), in the `inhere` directory. This reveals the target file.
+
+**5. Display contents**
+`cat ...Hiding-From-You`
+
+![alt text](images/image-11.png)
+
+Reads the content of the hidden file to retrieve the password.
